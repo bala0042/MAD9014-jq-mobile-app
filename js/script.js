@@ -1,11 +1,12 @@
 $(document).on( "mobileinit", function() {
 	var page = localStorage.getItem('page');
 	if(page !== "undefined"){
-		$.mobile.changePage( page );
+		$.mobile.pageContainer.pagecontainer( "change", "#"+page );
 	}
 });
-$(document).on("pagechange", function(toPage) {
+$(document).on("pagechange", function() {
 	if(typeof(Storage) !== "undefined"){
-		localStorage.setItem('page', toPage.currentTarget.URL);
+		localStorage.setItem('page', $.mobile.activePage.attr('id') );
+		console.log($.mobile.activePage.attr('id'));
 	}
 });
