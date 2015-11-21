@@ -1,0 +1,16 @@
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+	font:1em sans-serif;
+}
+h2{
+	font-size:1.4em;
+	font-weight:600;
+}
+img{
+	width:100%;
+}
+.editcodeimg{
+	background:#fff;
+}

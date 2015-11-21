@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>MAD9014 - jQuery Mobile App</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="css/themes/dark.min.css" />
+	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<section data-role="page" id="home" data-theme="b">
+
+	<div data-role="panel" id="left-panel" class="ui-panel ui-panel-position-left ui-panel-display-push ui-body-inherit ui-panel-animate ui-panel-open">
+		<div class="ui-panel-inner">
+			<ul data-role="listview" class="ui-listview">
+				<li data-icon="delete" class="ui-first-child"><a href="#" data-rel="close" class="ui-btn ui-btn-icon-right ui-icon-delete">Close</a></li>
+				<li><a href="#" class="ui-btn ui-state-disabled">Home</a></li>
+				<li><a href="#info" class="ui-btn">Developer Info</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div data-role="header" role="banner" class="ui-header ui-bar-inherit">
+		<h1 class="ui-title" role="heading" aria-level="1">Making a jQuery Mobile App</h1>
+		<a href="#left-panel" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-link ui-btn-left ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
+	</div>
+	
+	<article data-role="content" data-theme="b">
+		<h2>Welcome</h2>
+		<p>This jQuery Mobile App is a tutorial of itself. In this tutorial, you will learn how to use HTML, CSS, jQuery, jQuery Mobile and Themeroller to create your own mobile app.</p>
+		<br>
+		<a href="#win1" id="startTut" class="ui-shadow ui-btn ui-corner-all" data-transition="pop" data-theme="b">Start Tutorial</a>
+	</article>
+
+	<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="b">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" class="ui-btn ui-state-disabled" data-icon="home" data-iconpos="top">Home</a></li>
+				<li><a href="#info" class="ui-btn" data-icon="info" data-iconpos="top">Developer Info</a></li>
+			</ul>
+		</div>
+	</div>
+
+</section>
+
+<section data-role="page" id="win1" data-theme="b" data-dialog="true" data-close-btn="none">
+	<div data-role="header" data-theme="b">
+		<a href="#home" class="ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all">No text</a>
+		<h1>Step 1 of 6</h1>
+	</div>
+	<article data-role="content" data-theme="b">
+		<p>Copy the code for this app by viewing the source for this page and pressing Ctrl+U on Windows or Alt+Cmd+U on Mac.<br><br><img src="img/code.jpg" alt="Code"></p>
+		<a href="#win2" class="ui-btn ui-corner-all ui-btn-icon-notext ui-btn-inline ui-icon-carat-r ui-btn-icon-right nextP" data-theme="b">Next</a>
+	</article>
+</section>
+
+<section data-role="page" id="win2" data-theme="b" data-dialog="true" data-close-btn="none">
+	<div data-role="header" data-theme="b">
+		<a href="#home" class="ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all">No text</a>
+		<h1>Step 2 of 6</h1>
+	</div>
+	<article data-role="content" data-theme="b">
+		<p>Modify the content of the various pages.<br><br><img src="img/editcode.gif" alt="Editing Code" class="editcodeimg"></p>
+		<a href="#win1" class="ui-btn ui-corner-all ui-btn-icon-notext ui-btn-inline ui-icon-carat-l ui-btn-icon-left backP" data-theme="b">Back</a>
+		<a href="#win3" class="ui-btn ui-corner-all ui-btn-icon-notext ui-btn-inline ui-icon-carat-r ui-btn-icon-right nextP" data-theme="b">Next</a>
+	</article>
+</section>
+
+<!-- copy this block to add more steps -->
+<section data-role="page" id="win3" data-theme="b" data-dialog="true" data-close-btn="none">
+	<div data-role="header" data-theme="b">
+		<a href="#home" class="ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all">No text</a>
+		<h1>Step 3 of 6</h1>
+	</div>
+	<article data-role="content" data-theme="b">
+		<p>To add more steps, copy the step code block (follow the HTML comments in the source).<br><br><img src="img/copypaste.png" alt="Copy Paste code"></p>
+		<a href="#win2" class="ui-btn ui-corner-all ui-btn-icon-notext ui-btn-inline ui-icon-carat-l ui-btn-icon-left backP" data-theme="b">Back</a>
+		<a href="#win4" class="ui-btn ui-corner-all ui-btn-icon-notext ui-btn-inline ui-icon-carat-r ui-btn-icon-right nextP" data-theme="b">Next</a>
+	</article>
+</section>
+<!-- end of step block -->
+
+<section data-role="page" id="win4" data-theme="b" data-dialog="true" data-close-btn="none">
+	<div data-role="header" data-theme="b">
+		<a href="#home" class="ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all">No text</a>
+		<h1>Step 4 of 6</h1>
+	</div>
+	<article data-role="content" data-theme="b">
+		<p>Once you've added more steps, change the previous steps&apos; HTML. This involves editing the H1 tag for each step, as well as adding the Next button for the step that was last.</p>
+		<a href="#win3" class="ui-btn ui-corner-all ui-btn-icon-notext ui-btn-inline ui-icon-carat-l ui-btn-icon-left backP" data-theme="b">Back</a>
+		<a href="#win5" class="ui-btn ui-corner-all ui-btn-icon-notext ui-btn-inline ui-icon-carat-r ui-btn-icon-right nextP" data-theme="b">Next</a>
+	</article>
+</section>
+
+<section data-role="page" id="win5" data-theme="b" data-dialog="true" data-close-btn="none">
+	<div data-role="header" data-theme="b">
+		<a href="#home" class="ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all">No text</a>
+		<h1>Step 5 of 6</h1>
+	</div>
+	<article data-role="content" data-theme="b">
+		<p>Add the images to suit your steps. Also change the image URLs.</p>
+		<a href="#win4" class="ui-btn ui-corner-all ui-btn-icon-notext ui-btn-inline ui-icon-carat-l ui-btn-icon-left backP" data-theme="b">Back</a>
+		<a href="#win6" class="ui-btn ui-corner-all ui-btn-icon-notext ui-btn-inline ui-icon-carat-r ui-btn-icon-right nextP" data-theme="b">Next</a>
+	</article>
+</section>
+
+<section data-role="page" id="win6" data-theme="b" data-dialog="true" data-close-btn="none">
+	<div data-role="header" data-theme="b">
+		<a href="#home" class="ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all">No text</a>
+		<h1>Step 6 of 6</h1>
+	</div>
+	<article data-role="content" data-theme="b">
+		<p>Roll your own ThemeRoller theme and replace the CSS filename on line 8 with your own. Don't forget to also change the CSS files.</p>
+		<a href="#win5" class="ui-btn ui-corner-all ui-btn-icon-notext ui-btn-inline ui-icon-carat-l ui-btn-icon-left backP" data-theme="b">Back</a>
+	</article>
+</section>
+
+
+<section data-role="page" id="info" data-theme="b">
+
+	<div data-role="panel" id="left-panel2" class="ui-panel ui-panel-position-left ui-panel-display-push ui-body-inherit ui-panel-animate ui-panel-open">
+		<div class="ui-panel-inner">
+			<ul data-role="listview" class="ui-listview">
+				<li data-icon="delete" class="ui-first-child"><a href="#" data-rel="close" class="ui-btn ui-btn-icon-right ui-icon-delete">Close</a></li>
+				<li><a href="#home" class="ui-btn">Home</a></li>
+				<li><a href="#" class="ui-btn ui-state-disabled">Developer Info</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div data-role="header" role="banner" class="ui-header ui-bar-inherit">
+		<h1 class="ui-title" role="heading" aria-level="1">Developer Info</h1>
+		<a href="#left-panel2" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-link ui-btn-left ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
+	</div>
+	
+	<article data-role="content" data-theme="b">
+		<p>Made by Noyan Balay &bull; Version 2015.1</p>
+		<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="b">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" class="ui-btn" data-icon="home" data-iconpos="top">Home</a></li>
+					<li><a href="#" class="ui-btn ui-state-disabled" data-icon="info" data-iconpos="top">Developer Info</a></li>
+				</ul>
+			</div>
+		</div>
+	</article>
+	
+</section>
+<script src="js/script.js"></script>
+</body>
+</html>
