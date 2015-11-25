@@ -1,12 +1,22 @@
-$(document).on( "mobileinit", function() {
+$(document).on( "pageshow", function() {
 	var page = localStorage.getItem('page');
-	if(page !== "undefined"){
+	
+	$("#startTut").off("click").click(function(e){
+		e.preventDefault();
+		
+		if(!page){
+			page = "win1";
+		}
+		
 		$( ":mobile-pagecontainer" ).pagecontainer( "change", "#"+page );
-	}
+	});
 });
+
 $(document).on("pagechange", function() {
-	if(typeof(Storage) !== "undefined"){
-		localStorage.setItem('page', $.mobile.activePage.attr('id') );
-		//console.log($.mobile.activePage.attr('id'));
+	var pageid = $.mobile.activePage.attr('id');
+	
+	if(typeof(Storage) !== "undefined" && pageid != "home" && pageid != "info"){
+		localStorage.setItem('page', pageid);
+		//console.log(pageid);
 	}
 });
