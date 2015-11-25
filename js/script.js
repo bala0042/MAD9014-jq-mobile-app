@@ -1,10 +1,10 @@
-var page = localStorage.getItem('page');
-if(!page){
-	page = "win1";
-}
-//console.log(page);
-	
 $(document).on( "pageshow", function() {
+	var page = localStorage.getItem('page');
+	
+	if(!page){
+		page = "win1";
+	}
+	
 	$("#startTut").off("click").click(function(e){
 		e.preventDefault();
 		$( ":mobile-pagecontainer" ).pagecontainer( "change", "#"+page );
